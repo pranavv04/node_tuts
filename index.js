@@ -2,11 +2,10 @@ const express = require('express');
 const db = require('./db'); // Ensure this is the correct relative path to your `db.js`
 
 const app = express();
-
+require('dotenv').config();
 const bodyParser = require('body-parser')
 app.use(bodyParser.json()); //req.boy
-
-
+const PORT = process.env.PORT || 3000
 
 
 
@@ -26,7 +25,8 @@ app.use('/menu' , menuRoutes)
 
 
 
-app.listen(3000, () => console.log("Server started"));
+ 
+app.listen(PORT, () => console.log("Server started"));
 
 
 // C => create => POST
