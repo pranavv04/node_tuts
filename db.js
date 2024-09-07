@@ -1,8 +1,8 @@
 const mongoose = require('mongoose') // importing mongoose
 require('dotenv').config();
 // const mongoUrl = 'mongodb://127.0.0.1:27017/people'  // mongo url please avoid localhost and put this one
-const mongoUrl = process.env.DB_URL;
-// const mongUrl = process.env.MONGODB_URL_LOCAL; For local mongo db 
+// const mongoUrl = process.env.DB_URL;
+const mongoUrl = process.env.MONGODB_URL_LOCAL; //For local mongo db 
 
 //some parameters !important
 mongoose.connect(mongoUrl , {
